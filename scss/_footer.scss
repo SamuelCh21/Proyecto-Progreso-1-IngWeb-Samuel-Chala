@@ -1,0 +1,41 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  background: $blue;
+  color: $white;
+  padding: 50px 60px;
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  &__icon {
+    width: 40px;
+    background: $white;
+    border-radius: 8px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__info h4 {
+    margin-bottom: 10px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 20px;
+
+    &__logo {
+      grid-column: 1 / 3;
+    }
+  }
+}

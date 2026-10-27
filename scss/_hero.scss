@@ -1,0 +1,64 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 60px;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: normal;
+
+    strong {
+      color: $blue;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 450px;
+    justify-self: center;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    text-align: center;
+
+    &__text {
+      align-items: center;
+    }
+  }
+}
+
+.intro {
+  background: $white;
+  padding: 30px 60px;
+  text-align: center;
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+  }
+
+  &__images img {
+    width: 200px;
+  }
+
+  @include mobile {
+    padding: 30px 20px;
+
+    &__images {
+      gap: 20px;
+    }
+  }
+}
